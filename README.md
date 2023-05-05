@@ -16,7 +16,7 @@ Curso de Node da plataforma Udemy
 
 - Página Detalhes do Pet
 
-![Web Pet Details](https://github.com/FelipeFardo/Assets/blob/main/React-FardoGram/Screenshot_2.png)
+![Web Pet Details](https://github.com/FelipeFardo/Assets/blob/main/React-Get-A-Pet/Screenshot_2.png)
 
 - Página de Minhas adoções
 
