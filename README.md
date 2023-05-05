@@ -35,20 +35,20 @@ Curso de Node da plataforma Udemy
 
 Pré-requisitos: NodeJS
 
-# clonar o repositório da API
+### clonar o repositório da API
 
 git clone https://github.com/FelipeFardo/Node-Get-A-Pet
 
-# entrar na pasta do projeto, instalar as dependências e startar o back-end(API)
+### entrar na pasta do projeto, instalar as dependências e startar o back-end(API)
 
-npm install
+npm install</br>
 npm start
 
-# clonar o repositório
+### clonar o repositório
 
 git clone https://github.com/FelipeFardo/React-Get-A-Pet
 
-# entrar na pasta do projeto, instalar as dependências e startar o front-end
+### entrar na pasta do projeto, instalar as dependências e startar o front-end
 
-npm install
+npm install</br>
 npm start
