@@ -1,4 +1,4 @@
-# Project Get-A-Pet
+# Project Get A Pet
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/FelipeFardo/React-Get-A-Pet/blob/main/LICENSE)
 
