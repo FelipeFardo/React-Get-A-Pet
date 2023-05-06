@@ -15,13 +15,9 @@ const Profile = () => {
   const [token] = useState(localStorage.getItem("token") || "");
   const { setFlashMessage } = useFlashMessage();
   useEffect(() => {
-    api
-      .get("/users/checkuser", {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}  ` },
-      })
-      .then((response) => {
-        setUser(response.data);
-      });
+    api.get("/users/checkuser").then((response) => {
+      setUser(response.data);
+    });
   }, [token]);
 
   function onFileChange(e) {
@@ -45,7 +41,6 @@ const Profile = () => {
     const data = await api
       .patch(`/users/edit/${user._id}`, user, {
         headers: {
-          Authorization: `Bearer ${JSON.parse(token)}`,
           "Content-Type": "multipart/form-data",
         },
       })

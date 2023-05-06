@@ -10,13 +10,9 @@ function MyAdoptions() {
   const [token] = useState(localStorage.getItem("token") || "");
 
   useEffect(() => {
-    api
-      .get("pets/myadoptions", {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
-      })
-      .then((response) => {
-        setPets(response.data.pets);
-      });
+    api.get("pets/myadoptions").then((response) => {
+      setPets(response.data.pets);
+    });
   }, [token]);
 
   return (

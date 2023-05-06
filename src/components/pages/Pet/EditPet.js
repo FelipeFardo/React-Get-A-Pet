@@ -19,13 +19,9 @@ function EditPet() {
   const { setFlashMessage } = useFlashMessage();
 
   useEffect(() => {
-    api
-      .get(`/pets/${id}`, {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
-      })
-      .then((response) => {
-        setPet(response.data.pet);
-      });
+    api.get(`/pets/${id}`).then((response) => {
+      setPet(response.data.pet);
+    });
   }, [token, id]);
 
   async function updatePet(pet) {
@@ -43,7 +39,6 @@ function EditPet() {
     const data = await api
       .patch(`/pets/${pet._id}`, formData, {
         headers: {
-          Authorization: `Bearer ${JSON.parse(token)}`,
           "Content-Type": "multipart/form-data",
         },
       })

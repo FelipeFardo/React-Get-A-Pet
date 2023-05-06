@@ -16,23 +16,15 @@ function MyPets() {
   const { setFlashMessage } = useFlashMessage();
 
   useEffect(() => {
-    api
-      .get("/pets/mypets", {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
-      })
-      .then((response) => {
-        setPets(response.data.pets);
-      });
+    api.get("/pets/mypets").then((response) => {
+      setPets(response.data.pets);
+    });
   }, [token]);
 
   async function removePet(id) {
     let msgType = "success";
     const data = await api
-      .delete(`/pets/${id}`, {
-        headers: {
-          Authorization: `Bearer ${JSON.parse(token)}`,
-        },
-      })
+      .delete(`/pets/${id}`)
       .then((response) => {
         const updatePets = pets.filter((pet) => pet._id !== id);
         setPets(updatePets);
@@ -49,10 +41,13 @@ function MyPets() {
     let msgType = "success";
 
     const data = await api
-      .patch(`/pets/conclude/${id}`, {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
-      })
+      .patch(`/pets/conclude/${id}`)
       .then((response) => {
+        let updatePets = pets.map((pet) => {
+          if (pet._id === id) pet.available = false;
+          return pet;
+        });
+        setPets(updatePets);
         return response.data;
       })
       .catch((err) => {
@@ -84,7 +79,9 @@ function MyPets() {
                     {pet.adopter && (
                       <button
                         className={styles.concluded_btn}
-                        onClick={() => concluedAdoption(pet._id)}
+                        onClick={() => {
+                          concluedAdoption(pet._id);
+                        }}
                       >
                         Concluir adoção
                       </button>

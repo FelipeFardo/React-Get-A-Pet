@@ -20,11 +20,7 @@ function PetDetails() {
     let msgType = "success";
 
     const data = await api
-      .patch(`pets/schedule/${pet._id}`, {
-        headers: {
-          Authorization: `Bearer ${JSON.parse(token)}`,
-        },
-      })
+      .patch(`pets/schedule/${pet._id}`)
       .then((response) => {
         return response.data;
       })
@@ -59,6 +55,10 @@ function PetDetails() {
           <p>
             <span className="bold">Idade: </span>
             {pet.age} ano(s)
+          </p>
+          <p>
+            <span className="bold">Cor: </span>
+            {pet.color}
           </p>
           {token ? (
             <button onClick={schedule}>Solicitar uma visita</button>

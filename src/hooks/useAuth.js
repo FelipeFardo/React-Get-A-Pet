@@ -54,6 +54,7 @@ export default function useAuth() {
 
   function authUser(data) {
     localStorage.setItem("token", JSON.stringify(data.token));
+    api.defaults.headers.authorization = `Bearer ${data.token}`;
     setAuthenticated(true);
     navigate("/");
   }
