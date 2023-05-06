@@ -1,4 +1,4 @@
-# Project Get-A-Pet
+# Projeto Get A Pet
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/FelipeFardo/React-Get-A-Pet/blob/main/LICENSE)
 
@@ -16,7 +16,7 @@ Curso de Node da plataforma Udemy
 
 - Página Detalhes do Pet
 
-![Web Pet Details](https://github.com/FelipeFardo/Assets/blob/main/React-FardoGram/Screenshot_2.png)
+![Web Pet Details](https://github.com/FelipeFardo/Assets/blob/main/React-Get-A-Pet/Screenshot_2.png)
 
 - Página de Minhas adoções
 
