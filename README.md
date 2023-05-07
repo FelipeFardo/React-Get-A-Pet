@@ -33,7 +33,7 @@ Curso de Node da plataforma Udemy
 
 # Como executar o projeto
 
-Pré-requisitos: NodeJS
+Pré-requisitos: NodeJS, MongoDB
 
 ### clonar o repositório da API
 
